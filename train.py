@@ -3,7 +3,7 @@ from ultralytics import YOLO
 model = YOLO("yolov8n.pt")
 
 def main():
-    model.train(data="Datasets/SplitData/data.yaml",
+    model.train(data="Datasets/SplitData/Data.yaml",
                 epochs = 3,
     )
 

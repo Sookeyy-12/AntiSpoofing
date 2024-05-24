@@ -2,3 +2,4 @@ as_venv
 *.jpg
 *.txt
 !requirements.txt
+*.zip
