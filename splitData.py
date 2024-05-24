@@ -6,6 +6,7 @@ from itertools import islice
 outputFolderPath = "Datasets/SplitData"
 inputFodlerPath = "Datasets/All"
 splitRatio = {"train": 0.7, "validation": 0.2, "test": 0.1}
+classes = ["fake", "real"]
 
 try:
     shutil.rmtree(outputFolderPath)
@@ -64,3 +65,21 @@ for i,out in enumerate(Output):
     for fileName in out:
         shutil.copy(f"{inputFodlerPath}/{fileName}.jpg", f"{outputFolderPath}/{sequence[i]}/images/{fileName}.jpg")
         shutil.copy(f"{inputFodlerPath}/{fileName}.txt", f"{outputFolderPath}/{sequence[i]}/labels/{fileName}.txt")
+
+print("Split Process Completed...")
+
+
+# ----- Creating Data.yaml file ----- #
+dataYAML = f'path: ../Data\n\
+train: ../train/images\n\
+val: ../validation/images\n\
+test: ../test/images\n\
+\n\
+nc: {len(classes)}\n\
+names: {classes}'
+
+f = open(f"{outputFolderPath}/data.yaml", 'a')
+f.write(dataYAML)
+f.close()
+
+print("Data.yaml File Created...")
