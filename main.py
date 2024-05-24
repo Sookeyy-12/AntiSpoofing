@@ -49,4 +49,10 @@ while True:
     print(fps)
 
     cv2.imshow("Image", img)
-    cv2.waitKey(1)
+    key = cv2.waitKey(1) & 0xFF
+
+    # Exit if 'q' key is pressed
+    if key == ord("q"):
+        break
+
+cv2.destroyAllWindows()

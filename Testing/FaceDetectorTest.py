@@ -1,7 +1,7 @@
 from cvzone.FaceDetectionModule import FaceDetector
 import cv2
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 detector = FaceDetector()
 
 while True:
