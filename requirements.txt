@@ -1,3 +1,4 @@
 cvzone
 ultralytics
 mediapipe
+jupyter
