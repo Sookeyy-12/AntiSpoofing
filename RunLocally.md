@@ -1,5 +1,7 @@
 # Running the Project Locally
 
+STEP 0: Star this Repository ⭐! (optional)
+
 ## Table of Contents
 
 - [Setting up Environment](#setting-up-the-environment)

@@ -1,5 +1,7 @@
 # <center>AntiSpoofing - Datacollection and Training</center>
 
+<center>⭐ Hi there, if you find this repo useful, could you please consider starring it? Thanks! ⭐</center>
+
 ## Project Overview
 
 The AntiSpoofing project aims to develop a system for detecting and preventing spoofing attacks.
