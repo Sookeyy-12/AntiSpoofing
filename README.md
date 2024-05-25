@@ -1,6 +1,6 @@
-# <center>AntiSpoofing - Datacollection and Training</center>
+# <p align="center">AntiSpoofing - Datacollection and Training</p>
 
-<center>⭐ Hi there, if you find this repo useful, could you please consider starring it? Thanks! ⭐</center>
+<p align="center">⭐ Hi there, if you find this repo useful, could you please consider starring it? Thanks! ⭐</p>
 
 ## Project Overview
 

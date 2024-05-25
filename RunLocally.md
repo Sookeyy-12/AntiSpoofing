@@ -1,6 +1,7 @@
-# Running the Project Locally
+# <p align="center">Running the Project Locally</p>
 
-STEP 0: Star this Repository ⭐! (optional)
+<p align="center"> STEP 0: Star this Repository ⭐! (optional) </p>
+
 
 ## Table of Contents
 
