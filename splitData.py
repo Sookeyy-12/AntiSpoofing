@@ -4,7 +4,7 @@ import shutil
 from itertools import islice
 
 outputFolderPath = "Datasets/SplitData"
-inputFodlerPath = "Datasets/All"
+inputFolderPath = "Datasets/All"
 splitRatio = {"train": 0.7, "validation": 0.2, "test": 0.1}
 classes = ["fake", "real"]
 
@@ -25,7 +25,7 @@ os.makedirs(f"{outputFolderPath}/validation/labels", exist_ok=True)
 
 
 # ----- Get the Names ----- #
-listNames = os.listdir(inputFodlerPath)
+listNames = os.listdir(inputFolderPath)
 uniqueNames = []
 for name in listNames:
     uniqueNames.append(name.split('.')[0])
@@ -57,14 +57,15 @@ Input = iter(uniqueNames)
 Output = [list(islice(Input, elem)) for elem in lengthToSplit]
 
 print(f"Split: {len(Output[0])}, {len(Output[1])}, {len(Output[2])}")
+print(f"Splitting the Dataset... (This may take some time depending on the number of images)")
 
 
 # ----- Copy the Files ----- #
 sequence = ["train", "validation", "test"]
 for i,out in enumerate(Output):
     for fileName in out:
-        shutil.copy(f"{inputFodlerPath}/{fileName}.jpg", f"{outputFolderPath}/{sequence[i]}/images/{fileName}.jpg")
-        shutil.copy(f"{inputFodlerPath}/{fileName}.txt", f"{outputFolderPath}/{sequence[i]}/labels/{fileName}.txt")
+        shutil.copy(f"{inputFolderPath}/{fileName}.jpg", f"{outputFolderPath}/{sequence[i]}/images/{fileName}.jpg")
+        shutil.copy(f"{inputFolderPath}/{fileName}.txt", f"{outputFolderPath}/{sequence[i]}/labels/{fileName}.txt")
 
 print("Split Process Completed...")
 
@@ -83,3 +84,9 @@ f.write(dataYAML)
 f.close()
 
 print("Data.yaml File Created...")
+print("Zipping the Files... (This may take some time depending on the number of images.)")
+
+# zip all the files in this directory into a zip file named "data.zip"
+shutil.make_archive(outputFolderPath, 'zip', outputFolderPath, verbose=True)
+
+print("Zipped the Files...")

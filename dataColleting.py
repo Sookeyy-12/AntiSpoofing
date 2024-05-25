@@ -3,6 +3,11 @@ from cvzone.FaceDetectionModule import FaceDetector
 import cv2
 from time import time
 
+
+####################################
+#####   VALUE TO BE MODIFIED   #####
+classID = 1     # 0 is fake and 1 is real
+####################################
 ####################################
 offsetPercentageW = 10
 offsetPercentageH = 20
@@ -13,7 +18,6 @@ save = True
 blurThreshold = 500     # larger is more focused
 outputFolderPath = "Datasets/DataCollect"
 debug=False
-classID = 0     # 0 is fake and 1 is real
 ####################################
 
 cap = cv2.VideoCapture(1)
@@ -100,4 +104,8 @@ while True:
 
 
     cv2.imshow("Image", img)
-    cv2.waitKey(1)
+    key = cv2.waitKey(1) & 0xFF
+
+    # Exit if 'q' key is pressed
+    if key == ord("q"):
+        break
