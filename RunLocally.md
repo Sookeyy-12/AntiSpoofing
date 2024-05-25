@@ -7,6 +7,9 @@
 
 - [Setting up Environment](#setting-up-the-environment)
 - [Inference](#inference)
+- [Collecting Data for Training](#collecting-data-for-training)
+- [Training YOLO on the Collected Data](#training-yolo-on-the-collected-data)
+
 
 ## Setting up the Environment
 
