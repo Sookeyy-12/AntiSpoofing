@@ -3,11 +3,12 @@ import cv2
 import cvzone
 import math
 import time
+import glob
 
-cap = cv2.VideoCapture(1) # for webcam
+# cap = cv2.VideoCapture(1) # for webcam
+cap = cv2.VideoCapture("../Datasets/tesat.mp4") # for video
 cap.set(3, 640)
 cap.set(4, 480)
-# cap = cv2.VideoCapture("test.mp4") # for video file
 
 model = YOLO("../models/yolov8n.pt")
 

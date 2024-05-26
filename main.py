@@ -11,7 +11,7 @@ cap.set(3, 640)
 cap.set(4, 480)
 # cap = cv2.VideoCapture("test.mp4") # for video file
 
-model = YOLO("models\AntiSpoof2.pt")
+model = YOLO("models/AntiSpoof2.pt")
 
 classNames = ["fake", "real"]
 

@@ -6,7 +6,7 @@ from time import time
 
 ####################################
 #####   VALUE TO BE MODIFIED   #####
-classID = 1     # 0 is fake and 1 is real
+classID = 0     # 0 is fake and 1 is real
 ####################################
 ####################################
 offsetPercentageW = 10
@@ -15,12 +15,13 @@ confidence = 0.8
 camWidth, camHeight = 640, 480
 floatingPrecision = 6
 save = True
-blurThreshold = 500     # larger is more focused
+blurThreshold = 300     # larger is more focused
 outputFolderPath = "Datasets/DataCollect"
 debug=False
 ####################################
 
 cap = cv2.VideoCapture(1)
+# cap = cv2.VideoCapture("Datasets\\output_video.mp4")
 cap.set(3, camWidth)
 cap.set(3, camHeight)
 detector = FaceDetector()

@@ -3,3 +3,4 @@ as_venv
 *.txt
 !requirements.txt
 *.zip
+*.mp4
