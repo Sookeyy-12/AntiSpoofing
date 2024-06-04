@@ -6,7 +6,7 @@ from time import time
 
 ####################################
 #####   VALUE TO BE MODIFIED   #####
-classID = 0     # 0 is fake and 1 is real
+classID = 1     # 0 is fake and 1 is real
 ####################################
 ####################################
 offsetPercentageW = 10
@@ -15,13 +15,13 @@ confidence = 0.8
 camWidth, camHeight = 640, 480
 floatingPrecision = 6
 save = True
-blurThreshold = 300     # larger is more focused
+blurThreshold = 0     # larger is more focused
 outputFolderPath = "Datasets/DataCollect"
 debug=False
 ####################################
 
-cap = cv2.VideoCapture(1)
-# cap = cv2.VideoCapture("Datasets\\output_video.mp4")
+# cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("C:/Users/KIIT/Downloads/archive/live_video/0001e96803--62457bc94ff454214e8af551__Infinix note 11.mp4")
 cap.set(3, camWidth)
 cap.set(3, camHeight)
 detector = FaceDetector()

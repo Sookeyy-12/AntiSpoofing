@@ -4,14 +4,14 @@ import cvzone
 import math
 import time
 
-confidence = 0.0
+confidence = 0.9
 
-cap = cv2.VideoCapture(1) # for webcam
+cap = cv2.VideoCapture(0) # for webcam
 cap.set(3, 640)
 cap.set(4, 480)
 # cap = cv2.VideoCapture("test.mp4") # for video file
 
-model = YOLO("models/AntiSpoof3.pt")
+model = YOLO("models/best.pt")
 
 classNames = ["fake", "real"]
 

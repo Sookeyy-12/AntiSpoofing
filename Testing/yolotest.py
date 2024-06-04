@@ -5,8 +5,8 @@ import math
 import time
 import glob
 
-# cap = cv2.VideoCapture(1) # for webcam
-cap = cv2.VideoCapture("../Datasets/tesat.mp4") # for video
+cap = cv2.VideoCapture(0) # for webcam
+# cap = cv2.VideoCapture("../Datasets/tesat.mp4") # for video
 cap.set(3, 640)
 cap.set(4, 480)
 
